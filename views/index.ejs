@@ -9,12 +9,15 @@
     <% include template/header.ejs%>
 
     <h1><%= title %></h1>
-    <p>Welcome to <%= name %></p>
+
+    <p></p>
+
+    <p><%= videodata.categoryName %></p>
 
     <ul>
-      <% for(var i = 0; i < 5; i++){%>
-        <li>Tuna <%= i %></li>
-      <%}%>
+		<% videodata.categories.forEach(function(item){ %>
+			<li><%= item.categoryName %></li>
+		<%})%>
     </ul>
 
   </body>

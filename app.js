@@ -11,6 +11,10 @@ var about = require('./routes/about');
 
 var app = express();
 
+// set local variable for all file
+app.locals.points = "8,713"
+app.locals.videodata = require('./videodata.json')
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
